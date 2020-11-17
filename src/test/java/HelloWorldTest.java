@@ -9,14 +9,10 @@ import org.junit.jupiter.api.*;
 public class HelloWorldTest {
     public HelloWorld hw;
 
-    @BeforeEach
-    public void setUp() {
-        hw = new HelloWorld();
-    }
-
     @DisplayName("HelloWorld with Vamsi")
     @Test
     public void testGreet() {
+        hw = new HelloWorld();
         String wishes = hw.greet("Vamsi");
         Assertions.assertEquals(wishes, "Welcome Vamsi :)");
     }
